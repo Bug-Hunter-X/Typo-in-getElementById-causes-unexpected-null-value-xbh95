@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    //Incorrect way to access an element, will return null
+    let element = document.getElementByIdx("myDiv");
+    if(element){
+        element.textContent = "Text changed";
+    } else {
+        console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
